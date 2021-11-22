@@ -1,0 +1,33 @@
+﻿<Application x:Class="RandomNum.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:RandomNum"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+        <Style x:Key="jB" TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="Control.IsMouseOver" Value="True">
+                    <Setter Property="Control.FontFamily" Value="/RandomNum;component/Font/#Akrobat Bold" />
+                </Trigger>
+                <Trigger Property="IsPressed" Value="true">
+                    <Setter Property = "Background" Value="#FF0C0CB2"/>
+                </Trigger>
+            </Style.Triggers>
+            <Setter Property="FontFamily" Value="/RandomNum;component/Font/#Akrobat Light"/>
+            <Setter Property="Background" Value="#FF0000DC"/>
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Border CornerRadius="10"
+                                Background="{TemplateBinding Background}">
+                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                              />
+                        </Border>
+                    </ControlTemplate>
+
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Application.Resources>
+</Application>

@@ -1,0 +1,72 @@
+﻿<Window x:Class="RandomNum.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RandomNum"
+        mc:Ignorable="d"
+        Loaded="Window_Loaded"
+        Title="MainWindow" 
+        Height="400" 
+        Width="800"
+        WindowStartupLocation="CenterScreen" 
+        ResizeMode="NoResize" 
+        WindowStyle="None">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.6*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0.6*"/>
+        </Grid.RowDefinitions>
+        
+        <Image Source="Image/news_bg_desktop.jpg"
+               Grid.RowSpan="4"
+               Stretch="Fill"/>
+
+        <Button x:Name="Exit"
+                Click="Exit_Click"
+                Style="{StaticResource jB}"
+                Content="X"
+                Height="40"
+                Width="40"
+                HorizontalAlignment="Right"
+                VerticalAlignment="Top"
+                Background="Transparent"
+                BorderBrush="Transparent"
+                FontSize="30"/>
+
+
+        <Image Source="Image/wsrlogo-05.png"
+               HorizontalAlignment="Left"
+               Margin="0,5,0,0"/>
+
+
+        <Button x:Name="BGeneration"
+                Click="BGeneration_Click"
+                Style="{StaticResource jB}"
+                Margin="0,0,0,15"
+                Content="Сгенерировать"
+                FontSize="25"
+                Grid.Row="3"
+                Height="50"
+                Width="200" 
+                BorderBrush="Transparent" />
+
+        <TextBlock x:Name="textGen"
+                   Grid.Row="1"
+                   Grid.RowSpan="2"
+                   VerticalAlignment="Center"
+                   HorizontalAlignment="Center"
+                   FontSize="80"
+                   FontFamily="/RandomNum;component/Font/#Akrobat Light"/>
+        
+        <TextBlock Text="© 2014-2021 Автономная некоммерческая организация Агентство развития профессионального мастерства (Ворлдскиллс Россия)"
+                   Grid.Row="3" 
+                   VerticalAlignment="Bottom"
+                   HorizontalAlignment="Center"
+                   Foreground="White"
+                   FontSize="10"
+                   FontFamily="/RandomNum;component/Font/#Akrobat Light"/>
+    </Grid>
+</Window>
